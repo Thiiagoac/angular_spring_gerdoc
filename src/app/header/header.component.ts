@@ -11,6 +11,6 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
   }
-  logado: boolean = true;
+  logado: boolean = false;
   
 }

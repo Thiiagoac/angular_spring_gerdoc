@@ -1,0 +1,182 @@
+.banner {
+    position: relative;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../assets/banner3.jpg);
+    background-size: 100%;
+    filter: opacity(52%);
+}
+
+.banner-inside {
+    /* This will make it stack on top of the ::before */
+    position: relative;
+    color: black;
+}
+
+.btn {
+    margin-top: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.btn:hover {
+    border-width: 1px;
+    border-color: orange;
+    background-color: white;
+    color: black;
+    transition: 1s;
+}
+
+.legenda {
+    font-weight: 700;
+    line-height: 75px;
+    margin-bottom: 50px;
+    font-size: 80px;
+    font-family: Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.img-card {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.card {
+    margin: 5px;
+    width: 18em;
+    border-radius: 20px;
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+}
+
+.center {
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+}
+
+.title-section {
+    text-align: center;
+}
+
+.title-section::after {
+    content: "";
+    width: 140px;
+    height: 4px;
+    background-color: rgb(255, 136, 0);
+    display: block;
+    align-content: center;
+    justify-content: center;
+    margin: 10px auto;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+
+footer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: lightgray;
+}
+
+@media only screen and (max-width: 990px) {
+    .img1 {
+        width: 65px;
+    }
+    div.legenda {
+        font-size: 50px;
+    }
+    h1 {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .img1 {
+        width: 65px;
+    }
+    div.legenda {
+        font-size: 50px;
+    }
+    h1 {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .img1 {
+        width: 55px;
+    }
+    div.legenda {
+        font-size: 30px;
+    }
+    h1 {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 525px) {
+    .img1 {
+        width: 55px;
+    }
+    div.legenda {
+        font-size: 25px;
+        margin-bottom: 0px;
+    }
+    h1 {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .img1 {
+        width: 60px;
+    }
+    div.legenda {
+        font-size: 25px;
+        margin-bottom: 0px;
+    }
+    h1 {
+        margin-top: -30px;
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 368px) {
+    .img1 {
+        width: 60px;
+    }
+    div.legenda {
+        font-size: 25px;
+        margin-bottom: 0px;
+    }
+    h1 {
+        margin-top: -30px;
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 291px) {
+    .card {
+        width: 10em;
+    }
+}

@@ -3,9 +3,19 @@
     color: black!important;
 }
 
-button:hover {
+.btn:hover {
     border-width: 1px;
     border-color: black;
     background-color: white;
     color: black;
+}
+
+.nav-link {
+    font-size: 30px;
+}
+
+.navbar-brand {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    font-weight: bold;
 }
