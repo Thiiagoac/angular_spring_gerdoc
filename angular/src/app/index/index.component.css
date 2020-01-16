@@ -1,23 +1,33 @@
 .banner {
     position: relative;
+    background-image: url(../../assets/banner3.jpg);
+    background-repeat: no-repeat;
 }
 
 .banner::before {
+    filter: opacity(52%);
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(../../assets/banner3.jpg);
     background-size: 100%;
     filter: opacity(52%);
 }
 
 .banner-inside {
     /* This will make it stack on top of the ::before */
+    padding-top: 150px;
+    padding-bottom: 180px;
     position: relative;
     color: black;
+    text-shadow: 0 0 1px #fff;
+}
+
+.img1 {
+    width: 50px;
+    height: 50px;
 }
 
 .btn {
@@ -82,6 +92,19 @@
     margin-bottom: 40px;
 }
 
+.img1 {
+    width: 99px;
+    height: 169px;
+}
+
+.btn1 {
+    font-weight: bold;
+}
+
+.btn1:hover {
+    transition: 0.185s;
+}
+
 h1 {
     font-size: 50px;
     font-family: 'Courier New', Courier, monospace;
@@ -96,6 +119,20 @@ footer {
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: lightgray;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#demo {
+    color: white;
+    background-image: url(../../assets/newsletter.jpg);
+}
+
+#sobre {
+    margin-bottom: 150px;
+    margin-top: 150px;
 }
 
 @media only screen and (max-width: 990px) {

@@ -1,0 +1,67 @@
+<div class="banner">
+    <div class="container">
+        <h1 class="text-monospace">Adicionar documento
+        </h1>
+        <p class="text-monospace">Para adicionar um documento basta preencher todos os dados do formulário abaixo.</p>
+    </div>
+</div>
+<section id="formulario">
+    <div class="container my-3">
+        <div class="card">
+            <form formGroup="addDocForm">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <mat-form-field appearance="outline">
+                                    <mat-label for="name">Nome</mat-label>
+                                    <input type="text" matInput formControlName="name" placeholder="Digite o nome">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <mat-form-field appearance="outline">
+                                    <mat-label for="crm">CRM</mat-label>
+                                    <input type="text" matInput formControlName="crm" placeholder="Digite o CRM">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <mat-form-field appearance="outline">
+                                    <mat-label for="email">Email</mat-label>
+                                    <input type="email" matInput formControlName="email" placeholder="Digite o email">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <mat-form-field appearance="outline">
+                                    <mat-label for="password">Senha</mat-label>
+                                    <input type="password" matInput formControlName="password" placeholder="Digite a senha">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-footer text-right">
+                    <div class="row justify-content-between">
+                        <div class="col-4 text-left">
+                            <button [routerLink]="['/dashboard']" class="btn btn-outline-primary">Voltar<i
+                                class="material-icons pt-1"></i>
+                        </button>
+                        </div>
+                        <div class="col-4 text-right">
+                            <button class="btn btn-outline-dark" type="submit">Salvar<i class="material-icons pt-1">save</i>
+                        </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

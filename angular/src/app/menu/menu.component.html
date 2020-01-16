@@ -5,42 +5,43 @@
         <p class="text-monospace">Gerenciamento de documentos</p>
     </div>
 </div>
-<div class="container text-center my-5">
-    <div class="row">
+<section id="menu">
+    <div class="container text-center my-5">
+        <div class="row">
 
-        <div class="col-lg-4">
-            <a href="/menu">
-                <div class="card shadow rounded">
-                    <div class="card-body item">
-                        <fa-icon class="fa-7x" [icon]="faSearch"></fa-icon>
-                        <h4>Busca</h4>
+            <div class="col-lg-4">
+                <a href="/dashboard">
+                    <div class="card shadow rounded">
+                        <div class="card-body item">
+                            <fa-icon class="fa-7x" [icon]="faSearch"></fa-icon>
+                            <h4>Busca</h4>
+                        </div>
                     </div>
-                </div>
-            </a>
-        </div>
+                </a>
+            </div>
 
 
-        <div class="col-lg-4">
-            <a href="/menu">
-                <div class="card shadow rounded">
-                    <div class="card-body item" onclick="log()">
+            <div class="col-lg-4">
+                <a [routerLink]="['document']">
+                    <div class="card shadow rounded ">
+                        <div class="card-body item " onclick="log() ">
+                            <fa-icon class="fa-7x " [icon]="faUserPlus "></fa-icon>
+                            <h4>Cadastrar Documentos</h4>
 
-                        <fa-icon class="fa-7x" [icon]="faUserPlus"></fa-icon>
-                        <h4>Cadastrar Documentos</h4>
-
+                        </div>
                     </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-lg-4">
-            <a href="/menu">
-                <div class="card shadow rounded">
-                    <div class="card-body item">
-                        <fa-icon class="fa-7x" [icon]="faFile"></fa-icon>
-                        <h4>Cadastrar Funcionário</h4>
+                </a>
+            </div>
+            <div class="col-lg-4 ">
+                <a href="/dashboard ">
+                    <div class="card shadow rounded ">
+                        <div class="card-body item ">
+                            <fa-icon class="fa-7x " [icon]="faFile "></fa-icon>
+                            <h4>Visualizar Documentos</h4>
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
+            </div>
         </div>
     </div>
-</div>
+</section>

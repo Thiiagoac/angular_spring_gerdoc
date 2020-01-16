@@ -11,7 +11,7 @@ export class MenuComponent implements OnInit {
   faUserPlus = faUserPlus;
   faFile = faFile;
 
-  logado: boolean = false;
+  logado: boolean = true;
   nome: string = '';
 
   constructor() {

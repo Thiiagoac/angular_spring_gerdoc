@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Document implements Serializable {
@@ -22,7 +23,11 @@ public class Document implements Serializable {
 	public Document() {
 	}
 	
-	public Document(Integer id, String date, Category category) {
+	
+	@OneToOne
+	private Category categoria;
+	
+	public Document(Integer id,String date, Category category) {
 		super();
 		this.id = id;
 		this.date = date;
