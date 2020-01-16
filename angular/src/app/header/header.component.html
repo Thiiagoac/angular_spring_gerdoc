@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand text-dark ml-5" href="#">
+        <img src="../../assets/logo-com-frase.png" width="200" height="80">
+    </a>
+    <!--
+    <div class="navbar-brand headerDivider"></div>
+    -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarNav">
+        <ul class="navbar-nav ml-5 mr-auto">
+            <!--
+
+            <li class="nav-item">
+                <a class="nav-link text-dark" [hidden]="!logado" href="#">Funcionários</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" [hidden]="!logado" href="#">Documentos</a>
+            </li>
+            -->
+        </ul>
+
+        <form [hidden]="logado" class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="email" placeholder="Email" aria-label="Search">
+            <input class="form-control mr-sm-2" type="password" placeholder="Senha" aria-label="Search">
+            <button class="btn btn-dark my-2 my-sm-0 mr-1" [routerLink]="['dashboard']" type="submit">Login</button> ou
+        </form>
+        <a [hidden]="logado" class="ml-1 mr-5 " href="#"> Cadastre-se</a>
+        <h4 [hidden]="!logado" class="ml-1 mr-2" href="#"> Bem Vindo, {{nomeUser}}
+        </h4>
+        <div class="dropdown mr-5" [hidden]="!logado">
+            <button mat-fab color="primary" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <fa-icon [icon]="faUserCog"></fa-icon>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">
+                    <fa-icon [icon]="faCogs"></fa-icon> Configurações
+                </a>
+                <a class="dropdown-item" href="#">
+                    <fa-icon [icon]="faEdit"></fa-icon> Editar Dados
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">
+                    <fa-icon [icon]="faSignOutAlt"></fa-icon> Sair
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>

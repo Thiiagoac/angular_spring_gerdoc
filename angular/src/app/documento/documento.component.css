@@ -1,0 +1,56 @@
+.mat-form-field {
+    width: 100%;
+}
+
+.textarea {
+    width: 163px;
+    height: 453px;
+}
+
+.mat-datepicker-toggle {
+    color: blue;
+}
+
+.material-icons,
+button {
+    vertical-align: middle;
+}
+
+.sidenav-container {
+    height: 100%;
+}
+
+.sidenav {
+    width: 200px;
+}
+
+.sidenav .mat-toolbar {
+    background: inherit;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.mat-toolbar.mat-primary {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.cards {
+    margin-left: 30px;
+    margin-bottom: 30px;
+    max-width: 200px;
+}
+
+.banner {
+    background-attachment: fixed;
+    background-color: rgb(219, 219, 219);
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+#formulario {
+    padding-bottom: 369px;
+}
