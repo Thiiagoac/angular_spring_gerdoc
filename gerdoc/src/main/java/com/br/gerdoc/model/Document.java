@@ -9,35 +9,51 @@ import javax.persistence.Id;
 
 @Entity
 public class Document implements Serializable {
-	
+
 	private final static long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
-	
-	private Categoria categoria;
-	
-	public Document(int id, Categoria categoria) {
-		super();
-		this.id = id;
-		this.categoria = categoria;
+	private Integer id;
+
+	private String date;
+	private Category category;
+
+	public Document() {
 	}
 	
-	public int getId() {
+	public Document(Integer id, String date, Category category) {
+		super();
+		this.id = id;
+		this.date = date;
+		this.category = category;
+	}
+	
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
-	public Categoria getCategoria() {
-		return categoria;
+	public String getDate() {
+		return date;
 	}
 
-	public void setCategoria(Categoria categoria) {
-		this.categoria = categoria;
+	public void setDate(String date) {
+		this.date = date;
 	}
+
+	public Category getCategory() {
+		return category;
+	}
+
+	public void setCategory(Category category) {
+		this.category = category;
+	}
+
+	
+	
 	
 }
