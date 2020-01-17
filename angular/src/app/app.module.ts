@@ -8,9 +8,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
 import { IndexComponent } from './index/index.component';
-import { DocumentoComponent } from './documento/documento.component';
+import { DocumentoComponent } from './form-documento/documento.component';
 import { MaterialModule } from './modules/material.module';
 import { FooterComponent } from './footer/footer.component';
+import { TabledocumentoComponent } from './tabledocumento/tabledocumento.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { FooterComponent } from './footer/footer.component';
     IndexComponent,
     DocumentoComponent,
     FooterComponent,
+    TabledocumentoComponent,
   ],
   imports: [
     MaterialModule,
