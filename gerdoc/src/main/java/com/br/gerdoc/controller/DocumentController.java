@@ -37,7 +37,7 @@ public class DocumentController {
 	@RequestMapping(method = RequestMethod.POST)
 	public ResponseEntity<Void> insertDoc(@RequestBody Document obj) {
 		docService.insertDoc(obj);
-		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/id").buildAndExpand(obj.getId()).toUri();
+		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(obj.getId()).toUri();
 		return ResponseEntity.created(uri).build();
 	}
 

@@ -37,7 +37,7 @@ public class CategoryController {
 	@RequestMapping(method =RequestMethod.POST)
 	public ResponseEntity<Void> insertCategory(@RequestBody Category obj){
 		catService.insertCategory(obj);
-		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("{id}").buildAndExpand(obj.getId()).toUri();
+		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(obj.getId()).toUri();
 		return ResponseEntity.created(uri).build();
 	}
 	
