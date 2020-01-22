@@ -35,5 +35,9 @@ public class UserService {
 		userRepo.deleteById(id);
 	}
 	
+	public void login(String email, String senha) {
+		
+	}
+	
 	
 }

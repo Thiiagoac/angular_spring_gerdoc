@@ -7,8 +7,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.br.gerdoc.model.Category;
 import com.br.gerdoc.model.Document;
+import com.br.gerdoc.model.User;
 import com.br.gerdoc.respository.CategoryRepository;
 import com.br.gerdoc.respository.DocumentRepository;
+import com.br.gerdoc.respository.UserRepository;
 
 @SpringBootApplication
 public class GerdocApplication implements CommandLineRunner{
@@ -18,6 +20,9 @@ public class GerdocApplication implements CommandLineRunner{
 	
 	@Autowired
 	private CategoryRepository catRepo;
+	
+	@Autowired
+	private UserRepository userRepo;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(GerdocApplication.class, args);
@@ -30,6 +35,9 @@ public class GerdocApplication implements CommandLineRunner{
 		catRepo.save(c1);
 		Document d1 = new Document(null,"teste",c1);
 		docRepo.save(d1);
+		User u = new User(null,"thiago","thiago@email.com","123");
+		u.getDocs().add(d1);
+		userRepo.save(u);
 	}
 
 }
