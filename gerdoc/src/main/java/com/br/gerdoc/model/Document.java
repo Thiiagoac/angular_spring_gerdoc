@@ -10,6 +10,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Document implements Serializable {
 
@@ -20,15 +22,14 @@ public class Document implements Serializable {
 	private Integer id;
 
 	private String date;
-	private Category category;
 
+	@OneToOne
+	private Category category;
+	
 	@ManyToOne
 	@JoinColumn(name = "user_id")
 	private User user;
 	
-	@OneToOne
-	private Category categoria;
-
 	public Document() {
 	}
 	
@@ -63,7 +64,14 @@ public class Document implements Serializable {
 		this.category = category;
 	}
 
-	
-	
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+
 	
 }

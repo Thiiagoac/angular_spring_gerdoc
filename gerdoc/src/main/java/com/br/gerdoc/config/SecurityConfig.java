@@ -1,8 +1,11 @@
 package com.br.gerdoc.config;
 
+import java.util.Arrays;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.env.Environment;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -24,20 +27,19 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	
 	@Autowired
 	private UserDetailsService userDetailsService;
-//	
-//	@Autowired
-//	private Environment env;
-//	
+	
+	@Autowired
+	private Environment env;
+	
 	@Autowired
 	private JWTUtil jwtUtil;
 	
 	private static final String[] PUBLIC_MATCHERS = {
-			"/h2-console/**"
-		};
+		"/h2-console/**",
+	};
 	
 	
 	private static final String[] PUBLIC_MATCHERS_GET = {
-	    "/h2-console/**",
 		"/category/**",
 		"/document/**",
 		"/user/**"
@@ -46,9 +48,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		
-//		if(Arrays.asList(env.getActiveProfiles()).contains("test")) {
-//			http.headers().frameOptions().disable();
-//		}
+		http.headers().frameOptions().disable();
 		
 		http.cors().and().csrf().disable();
 		http.authorizeRequests()

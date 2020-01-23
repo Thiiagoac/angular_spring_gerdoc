@@ -3,6 +3,7 @@ package com.br.gerdoc.services;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.br.gerdoc.model.User;
@@ -10,7 +11,9 @@ import com.br.gerdoc.respository.UserRepository;
 
 @Service
 public class UserService {
-	
+	@Autowired
+	public BCryptPasswordEncoder pe;
+
 	@Autowired
 	public UserRepository userRepo;
 	
@@ -27,7 +30,7 @@ public class UserService {
 		User newUser = findById(id);
 		newUser.setEmail(obj.getEmail());
 		newUser.setNome(obj.getNome());
-		newUser.setPassword(obj.getPassword());
+		newUser.setPassword(pe.encode(obj.getPassword()));
 		userRepo.save(newUser);
 	}
 	

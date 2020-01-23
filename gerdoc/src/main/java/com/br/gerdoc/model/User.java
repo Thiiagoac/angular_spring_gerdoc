@@ -21,12 +21,13 @@ public class User implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 
-	@JsonIgnore
 	@OneToMany(mappedBy = "user")
 	private List<Document> docs = new ArrayList<>();
 
 	private String nome;
 	private String email;
+	
+	@JsonIgnore
 	private String password;
 
 	public User() {
