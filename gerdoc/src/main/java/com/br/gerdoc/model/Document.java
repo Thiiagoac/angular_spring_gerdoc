@@ -26,6 +26,7 @@ public class Document implements Serializable {
 	@OneToOne
 	private Category category;
 	
+	@JsonIgnore
 	@ManyToOne
 	@JoinColumn(name = "user_id")
 	private User user;

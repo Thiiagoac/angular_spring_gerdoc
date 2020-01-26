@@ -1,6 +1,6 @@
 .banner {
     position: relative;
-    background-image: url(../../assets/banner3.jpg);
+    background-image: url(src/assets/banner3.jpg);
     background-repeat: no-repeat;
 }
 
@@ -127,7 +127,7 @@ html {
 
 #demo {
     color: white;
-    background-image: url(../../assets/newsletter.jpg);
+    background-image: url(src/assets/newsletter.jpg);
 }
 
 #sobre {

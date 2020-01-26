@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faSearch , faUserPlus ,faFile} from '@fortawesome/free-solid-svg-icons';
+import { CookieService } from 'ngx-cookie-service';
+import { HeaderComponent} from 'src/app/components/header/header.component';
 
 @Component({
   selector: 'app-menu',
@@ -11,19 +13,14 @@ export class MenuComponent implements OnInit {
   faUserPlus = faUserPlus;
   faFile = faFile;
 
-  logado: boolean = true;
-  nome: string = '';
-
-  constructor() {
+  
+  constructor(public cookieService : CookieService) {
   }
-
+  head : HeaderComponent;
+  logado: boolean = true;
+  nome: string = this.cookieService.get('emailUser').split('@')[0];;
+  
   ngOnInit() {
-
-    if (this.logado) {
-      return this.nome = 'Thiago';
-    } else {
-      return this.nome = 'Visitante';
-    }
   }
 
   log(){

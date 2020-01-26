@@ -10,17 +10,17 @@ public class UserSS implements UserDetails {
 	
 	private Integer id;
 	private String email;
-	private String senha;
+	private String password;
 	private  Collection<? extends GrantedAuthority> authorites;
 	
 	public UserSS() {	
 	}
 	
-	public UserSS(Integer id, String email, String senha) {
+	public UserSS(Integer id, String email, String password) {
 		super();
 		this.id = id;
 		this.email = email;
-		this.senha = senha;
+		this.password = password;
 	}
 
 	public Integer getId() {
@@ -34,7 +34,7 @@ public class UserSS implements UserDetails {
 
 	@Override
 	public String getPassword() {
-		return senha;
+		return password;
 	}
 
 	@Override
