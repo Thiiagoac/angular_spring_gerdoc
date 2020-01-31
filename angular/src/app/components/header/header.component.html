@@ -19,8 +19,8 @@
         </ul>
 
         <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" [hidden]="logado" class="form-inline my-2 my-lg-0">
-            <input class="mr-sm-2" formControlName="email" name="email" required="required" type="email" placeholder="Email" aria-label="Search">
-            <input class="mr-sm-2" formControlName="senha" name="senha" required="required" type="password" placeholder="Senha" aria-label="Search">
+            <input class="mr-sm-2" formControlName="email" name="email" required type="email" placeholder="Email" aria-label="Search">
+            <input class="mr-sm-2" formControlName="senha" name="senha" required type="password" placeholder="Senha" aria-label="Search">
             <button class="btn btn-dark my-2 my-sm-0 mr-1" type="submit">Login</button> ou
         </form>
 

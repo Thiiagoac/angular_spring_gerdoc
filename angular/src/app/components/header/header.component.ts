@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { faUserCog, faCogs, faEdit, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import { Router } from '@angular/router';
 import { LoginService } from 'src/app/services/login.service';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { User } from 'src/app/model/User';
 import { CookieService } from 'ngx-cookie-service';
 @Component({
@@ -22,12 +22,13 @@ export class HeaderComponent implements OnInit {
   constructor(public route: Router, public serviceLogin: LoginService, public cookieService : CookieService) { }
 
   public loginForm = new FormGroup({
-    email: new FormControl(''),
-    senha: new FormControl(''),
+    email: new FormControl('',Validators.required),
+    senha: new FormControl('',Validators.required),
   });
 
   ngOnInit() {
   }
+  
   
   getStatusLogado(){
     return this.logado;

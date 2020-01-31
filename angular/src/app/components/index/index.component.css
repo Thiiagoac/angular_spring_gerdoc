@@ -1,7 +1,7 @@
 .banner {
     position: relative;
     background-image: url(src/assets/banner3.jpg);
-    background-repeat: no-repeat;
+    background-repeat: repeat-x;
 }
 
 .banner::before {
